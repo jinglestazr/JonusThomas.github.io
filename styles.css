@@ -7,7 +7,7 @@
 body {
   margin: 0;
   font-family: 'Rubik', sans-serif;
-  background: url('../test3.jpg') no-repeat center center fixed;
+  background: url('../test.jpg') no-repeat center center fixed;
   background-size: cover;
   color: #fff;
   animation: fadeIn 1.5s ease-in;
@@ -283,3 +283,67 @@ footer {
   }
 }
 
+
+/* Latest Updates Section */
+.latest-updates {
+  background-color: #f7f7f7;
+  padding: 60px 20px;
+  color: #111;
+  text-align: center;
+}
+
+.updates-heading {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #0f1923;
+}
+
+.updates-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.update-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 300px;
+  padding: 20px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.update-card:hover {
+  transform: translateY(-5px);
+}
+
+.update-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.update-date {
+  font-size: 0.8rem;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.update-type {
+  color: #ff4655;
+  font-weight: bold;
+}
+
+.update-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #0f1923;
+  margin-bottom: 10px;
+}
+
+.update-description {
+  font-size: 0.9rem;
+  color: #333;
+}
