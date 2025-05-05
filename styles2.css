@@ -5,12 +5,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 100vh;
   background: url('https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt71a6b1b580c12bfe/64f221c33dff1b122aef8804/Homepage_Cinematic_BG.jpg') no-repeat center center/cover;
   color: white;
   text-align: center;
   overflow: hidden;
 }
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
 
 .hero::before {
   content: "";
@@ -24,9 +34,10 @@
 
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 1;
   max-width: 700px;
   padding: 20px;
+  color: white;
 }
 
 .hero h2 {
@@ -46,16 +57,16 @@
   display: inline-block;
   background-color: #ff4655;
   color: white;
-  padding: 14px 30px;
+  padding: 12px 24px;
   font-weight: bold;
   font-size: 1em;
-  border-radius: 6px;
+  border-radius: 8px;
   text-decoration: none;
   transition: background 0.3s, transform 0.2s;
 }
 
 .cta-button:hover {
-  background-color: #e03a49;
+  background-color: #e63946;
   transform: scale(1.05);
 }
 
