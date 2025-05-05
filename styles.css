@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Rubik&display=swap');
+
+* { margin: 0;
+  padding: 0;
+  box-sizing:border-box;}
+
+body {
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+  background: url('../test3.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  animation: fadeIn 1.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+header {
+  background-color: #ff4655;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+header h1 {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.7em;
+  letter-spacing: 2px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  background-color: #1f1f1f;
+  padding: 12px;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 2px;
+  background: #ff4655;
+  transition: width 0.3s ease;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+nav a:hover {
+  color: #ff4655;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  background: url('https://cdn1.dotesports.com/wp-content/uploads/2023/03/06110730/valorant-wallpaper-3.jpg') center/cover no-repeat;
+  text-align: center;
+  animation: zoomIn 2s ease;
+}
+
+@keyframes zoomIn {
+  0% { transform: scale(0.95); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.hero h2 {
+  margin-top: -15%;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 14px 25px;
+  border-radius: 10px;
+  font-size: 2.2em;
+}
+
+.grid-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 30px;
+}
+
+.card {
+  background-color: rgba(30, 30, 30, 0.9);
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(255, 70, 85, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(255, 70, 85, 0.4);
+}
+
+.reviews {
+  padding: 20px;
+  background-color: #181818;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+  gap: 12px;
+}
+
+input, textarea {
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  background-color: #2b2b2b;
+  color: white;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+input:focus, textarea:focus {
+  background-color: #333;
+  outline: 2px solid #ff4655;
+}
+
+button {
+  padding: 12px;
+  background-color: #ff4655;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1em;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #e33a49;
+  transform: scale(1.05);
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #1f1f1f;
+  font-size: 0.9em;
+  margin-bottom: 0% ;
+  border-top: solid #333;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h2 {
+    font-size: 1.5em;
+  }
+}
+/* Agent Flip Card Layout */
+.agents-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Card Container */
+.agent-card {
+  perspective: 1000px;
+}
+
+/* Flip Card Inner */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(255, 70, 85, 0.3);
+}
+
+/* Hover Effect */
+.agent-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front and Back Faces */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Front Side */
+.flip-card-front img {
+  width: 100%;
+  height: 85%;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* Agent Name Below Image */
+.flip-card-front .agent-name {
+  margin-top: 5px;
+  font-size: 1em;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+/* Back Side */
+.flip-card-back {
+  background-color: #2a2a2a;
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+/* Back Side Text */
+.flip-card-back h3 {
+  margin-bottom: 10px;
+  font-size: 1.4em;
+  color: #ff4655;
+}
+
+.flip-card-back p {
+  font-size: 0.95em;
+  line-height: 1.4em;
+  max-width: 90%;
+  color: #ccc;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .flip-card-inner {
+    height: 260px;
+  }
+}
+
