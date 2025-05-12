@@ -79,7 +79,6 @@ nav a:hover::after {
   justify-content: center;
   align-items: center;
   height: 60vh;
-  background: url('https://cdn1.dotesports.com/wp-content/uploads/2023/03/06110730/valorant-wallpaper-3.jpg') center/cover no-repeat;
   text-align: center;
   animation: zoomIn 2s ease;
 }
