@@ -1,22 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Rubik&display=swap');
 
-* { margin: 0;
+* {
+  margin: 0;
   padding: 0;
-  box-sizing:border-box;}
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
   font-family: 'Rubik', sans-serif;
-  background: url('assets homepage/background.jpg') no-repeat center center fixed;
-
+  background: url('background.jpg') no-repeat center center fixed;
   background-size: cover;
   color: #fff;
   animation: fadeIn 1.5s ease-in;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 header {
@@ -73,49 +78,6 @@ nav a:hover::after {
   width: 100%;
 }
 
-.hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 60vh;
-  text-align: center;
-  animation: zoomIn 2s ease;
-}
-
-@keyframes zoomIn {
-  0% { transform: scale(0.95); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
-}
-
-.hero h2 {
-  margin-top: -15%;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 14px 25px;
-  border-radius: 10px;
-  font-size: 2.2em;
-}
-
-.grid-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 30px;
-}
-
-.card {
-  background-color: rgba(30, 30, 30, 0.9);
-  padding: 18px;
-  border-radius: 12px;
-  box-shadow: 0 0 12px rgba(255, 70, 85, 0.2);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 20px rgba(255, 70, 85, 0.4);
-}
-
 .reviews {
   padding: 20px;
   background-color: #181818;
@@ -129,7 +91,8 @@ form {
   gap: 12px;
 }
 
-input, textarea {
+input,
+textarea {
   padding: 12px;
   border-radius: 6px;
   border: none;
@@ -139,7 +102,8 @@ input, textarea {
   transition: background-color 0.3s;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   background-color: #333;
   outline: 2px solid #ff4655;
 }
@@ -166,7 +130,7 @@ footer {
   padding: 15px;
   background-color: #1f1f1f;
   font-size: 0.9em;
-  margin-bottom: 0% ;
+  margin-bottom: 0%;
   border-top: solid #333;
   position: fixed;
   width: 100%;
@@ -178,11 +142,8 @@ footer {
     flex-direction: column;
     align-items: center;
   }
-
-  .hero h2 {
-    font-size: 1.5em;
-  }
 }
+
 /* Agent Flip Card Layout */
 .agents-grid {
   display: grid;
@@ -215,7 +176,8 @@ footer {
 }
 
 /* Front and Back Faces */
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -281,69 +243,4 @@ footer {
   .flip-card-inner {
     height: 260px;
   }
-}
-
-
-/* Latest Updates Section */
-.latest-updates {
-  background-color: #f7f7f7;
-  padding: 60px 20px;
-  color: #111;
-  text-align: center;
-}
-
-.updates-heading {
-  font-size: 2rem;
-  margin-bottom: 30px;
-  color: #0f1923;
-}
-
-.updates-grid {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.update-card {
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  width: 300px;
-  padding: 20px;
-  text-align: left;
-  transition: transform 0.3s ease;
-}
-
-.update-card:hover {
-  transform: translateY(-5px);
-}
-
-.update-card img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-.update-date {
-  font-size: 0.8rem;
-  color: #555;
-  margin-bottom: 5px;
-}
-
-.update-type {
-  color: #ff4655;
-  font-weight: bold;
-}
-
-.update-title {
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #0f1923;
-  margin-bottom: 10px;
-}
-
-.update-description {
-  font-size: 0.9rem;
-  color: #333;
 }

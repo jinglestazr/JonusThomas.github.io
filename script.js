@@ -22,15 +22,3 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
   
-  window.addEventListener('DOMContentLoaded', () => {
-  const video = document.getElementById('bgVideo');
-  const bgImage = document.querySelector('.background-image-fallback');
-
-  if (video && bgImage) {
-    video.addEventListener('play', () => {
-      setTimeout(() => {
-        bgImage.classList.add('background-fade-out');
-      }, 100); // short delay to ensure video begins
-    });
-  }
-});

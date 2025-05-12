@@ -6,41 +6,21 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background: url('https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt71a6b1b580c12bfe/64f221c33dff1b122aef8804/Homepage_Cinematic_BG.jpg') no-repeat center center/cover;
   color: white;
   text-align: center;
   overflow: hidden;
 }
 
 .background-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-  opacity: 0; /* start hidden */
-  transition: opacity 2s ease-in-out;
-}
-
-.background-image-fallback {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('assets homepage/background.jpg') no-repeat center center;
-  background-size: cover;
-  z-index: -2;
-  opacity: 1;
-  transition: opacity 1.5s ease-in-out;
-}
-
-.background-fade-out {
-  opacity: 0;
-}
-
-
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
 
 .hero::before {
   content: "";
