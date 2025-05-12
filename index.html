@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="styles2.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="script.js"></script>
+
 </head>
 <body>
 
@@ -22,17 +24,22 @@
     <a href="Pages/reviews.html">Reviews</a>
   </nav>
 
-  <section class="hero">
-    <video autoplay muted loop playsinline class="background-video">
-      <source src="assets homepage/video.mp4" type="video/mp4">
-    
-    </video>
-    <div class="hero-content">
-      <h1>Unleash Your Inner Agent</h1>
-      <p>Dominate the battlefield. Welcome to Valorant.</p>
-      <a href="Pages/agents.html" class="cta-button">Explore Agents</a> 
-    </div>
-  </section>
+<section class="hero">
+  <!-- Background Image Layer -->
+  <div class="background-image-fallback"></div>
+
+  <!-- Video Background -->
+  <video autoplay muted loop playsinline class="background-video" id="bgVideo">
+    <source src="assets homepage/video.mp4" type="video/mp4">
+  </video>
+
+  <div class="hero-content">
+    <h1>Unleash Your Inner Agent</h1>
+    <p>Dominate the battlefield. Welcome to Valorant.</p>
+    <a href="Pages/agents.html" class="cta-button">Explore Agents</a> 
+  </div>
+</section>
+
   
 
   <section class="features">
