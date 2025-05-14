@@ -153,12 +153,10 @@ footer {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Card Container */
 .agent-card {
   perspective: 1000px;
 }
 
-/* Flip Card Inner */
 .flip-card-inner {
   position: relative;
   width: 100%;
@@ -170,12 +168,10 @@ footer {
   box-shadow: 0 10px 20px rgba(255, 70, 85, 0.3);
 }
 
-/* Hover Effect */
 .agent-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
 
-/* Front and Back Faces */
 .flip-card-front,
 .flip-card-back {
   position: absolute;
@@ -190,7 +186,6 @@ footer {
   align-items: center;
 }
 
-/* Front Side */
 .flip-card-front img {
   width: 100%;
   height: 85%;
@@ -199,7 +194,6 @@ footer {
   border-top-right-radius: 12px;
 }
 
-/* Agent Name Below Image */
 .flip-card-front .agent-name {
   margin-top: 5px;
   font-size: 1em;
@@ -212,7 +206,6 @@ footer {
   border-bottom-right-radius: 12px;
 }
 
-/* Back Side */
 .flip-card-back {
   background-color: #2a2a2a;
   color: white;
@@ -224,7 +217,6 @@ footer {
   padding: 15px;
 }
 
-/* Back Side Text */
 .flip-card-back h3 {
   margin-bottom: 10px;
   font-size: 1.4em;
@@ -238,9 +230,125 @@ footer {
   color: #ccc;
 }
 
-/* Responsive tweaks */
 @media (max-width: 600px) {
   .flip-card-inner {
     height: 260px;
+  }
+}
+
+/* Valorant Maps Section */
+.maps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 40px;
+}
+
+.map-card {
+  background-color: #1f1f1f;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(255, 70, 85, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.map-card:hover {
+  transform: translateY(-5px);
+}
+
+.map-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.map-card h2 {
+  color: #ff4655;
+  padding: 12px;
+  font-size: 1.5em;
+}
+
+.map-card p {
+  padding: 0 12px 20px;
+  color: #ccc;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+.maps-section {
+  padding: 60px 30px;
+  background-color: #0f1923;
+  color: white;
+  text-align: center;
+}
+
+.maps-section h2 {
+  font-size: 2.4em;
+  margin-bottom: 40px;
+}
+
+.maps-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.map-card {
+  background-color: #1f1f1f;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 70, 85, 0.2);
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  width: 300px;
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.map-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.map-info {
+  padding: 20px;
+  text-align: left;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.map-card.active {
+  flex-direction: row;
+  width: 90%;
+  max-height: none;
+}
+
+.map-card.active img {
+  width: 50%;
+  height: auto;
+  transform: scale(1.05);
+}
+
+.map-card.active .map-info {
+  display: block;
+  opacity: 1;
+  width: 50%;
+  padding: 30px;
+}
+
+@media (max-width: 768px) {
+  .map-card.active {
+    flex-direction: column;
+  }
+
+  .map-card.active img,
+  .map-card.active .map-info {
+    width: 100%;
   }
 }
